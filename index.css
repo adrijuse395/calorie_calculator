@@ -1,0 +1,186 @@
+/* =============================
+   RESET BÁSICO
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: clamp(16px, 1.1vw, 20px);
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f0fff4, #e6f7ff);
+  padding: 1rem;
+}
+
+/* =============================
+   HEADER
+============================= */
+header {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #ffffffcc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: #16480c; /* verde saludable */
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* =============================
+   MAIN CONTENT
+============================= */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: #195b1d; /* azul claro */
+  margin: 1.5rem 0 0.8rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Fórmulas destacadas */
+.formula {
+  display: block;
+  background: #f9f9f9;
+  padding: 0.5rem 0.8rem;
+  border-left: 4px solid #2e7d32;
+  font-family: monospace;
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+}
+
+/* =============================
+   FORMULARIO
+============================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffffcc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+input, select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 6px rgba(46,125,50,0.3);
+}
+
+/* Botón */
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+/* =============================
+   RESULTADO
+============================= */
+#result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+#result.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#result h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e4d2b; /* verde elegante */
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.4rem;
+}
+
+#calories {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1d7726; /* azul llamativo */
+}
+
+/* =============================
+   RESPONSIVE EXTRA
+============================= */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  header {
+    padding: 1.2rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
